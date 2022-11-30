@@ -11,13 +11,13 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/student_list.css' %}" />
-    <title>Student List</title>
+    <link rel="stylesheet" href="{% static 'css/supervisor.css' %}" />
+    <title> Student Home</title>
   </head>
   <body>
     <section>
       <!------------------Navbar Start--------------------->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <a class="navbar-brand" href="#">FYDP</a>
         <button
           class="navbar-toggler"
@@ -34,27 +34,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="/teacher/t_home">Home </a>
+              <a class="nav-link" href="/student/s_home">Home </a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/teacher/student_list">Student List </a>
+            <li class="nav-item active ">
+              <a class="nav-link" href="/student/supervisor"> Supervisor </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/teacher/work_area">Work Area </a>
-            </li>
-
+            
             <div class="prof_lgout">
                 <div><li class="nav-item ">
-                    <a class="nav-link" href="/teacher/t_profile">Profile </a>
+                    <a class="nav-link" href="/student/s_profile">Profile </a>
                   </li></div>
 
-                  <div><a href="{% url 't_logout' %}" class="btn btn-secondary t_logout"> Logout</a></div>
+                  <div><a href="{% url 's_logout' %}" class="btn btn-secondary t_logout"> Logout</a></div>
             </div>
           </ul>
         </div>
       </nav>
 
-      <h1>This is student list portion </h1>
+      <h1>This is supervisor</h1>
       <!------------------Navbar Start--------------------->
     </section>
     <script
