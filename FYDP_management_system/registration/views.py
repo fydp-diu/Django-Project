@@ -9,8 +9,7 @@ def dashboard(request):
 
 
 
-def registration(request):
-    return render(request,'registration/registration.html')
+
 
 
 def t_registration(request):

@@ -42,20 +42,50 @@
             <li class="nav-item">
               <a class="nav-link" href="/teacher/work_area">Work Area </a>
             </li>
-           
-            <div class="prof_lgout">
-              <div><li class="nav-item active">
-                  <a class="nav-link" href="/teacher/t_profile">Profile </a>
-                </li></div>
+            <li class="nav-item">
+              <a class="nav-link" href="/teacher/edits"> Edits </a>
+            </li>
 
-                <div><a href="{% url 't_logout' %}" class="btn btn-secondary t_logout"> Logout</a></div>
-          </div>
+            <div class="prof_lgout">
+              <div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/teacher/t_profile">Profile </a>
+                </li>
+              </div>
+
+              <div>
+                <a
+                  href="{% url 't_logout' %}"
+                  class="btn btn-secondary t_logout"
+                >
+                  Logout</a
+                >
+              </div>
+            </div>
           </ul>
         </div>
       </nav>
 
       <h1>This is teacher profile</h1>
       <!------------------Navbar Start--------------------->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            Name : {{user.username}}<br />
+            <br />
+            Email : {{user.email}}<br />
+            <br />
+            Expertise : {{user.t_profile.expertise}}<br />
+            <br />
+            Designation : {{user.t_profile.designation}}<br />
+            <br />
+            Nationality : {{user.t_profile.nationality}}<br />
+            <br />
+
+            Phone : {{user.t_profile.phone}}<br />
+          </div>
+        </div>
+      </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

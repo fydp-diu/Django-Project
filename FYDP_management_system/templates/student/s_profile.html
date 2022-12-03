@@ -41,6 +41,13 @@
             </li>
             
             <div class="prof_lgout">
+              <div class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="/student/s_edits"> Edits</a>
+                </li>
+
+              </div>
+
                 <div><li class="nav-item  active">
                     <a class="nav-link" href="/student/s_profile">Profile </a>
                   </li></div>
@@ -52,7 +59,25 @@
       </nav>
 
       <h1>This is student profile</h1>
-      <!------------------Navbar Start--------------------->
+      <!------------------Navbar End--------------------->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            Name : {{user.username}}<br />
+            <br />
+            Email : {{user.email}}<br />
+            <br />
+            Level and Terms : {{user.s_profile.level_term}}<br />
+            <br />
+            Id : {{user.s_profile.identity}}<br />
+            <br />
+            Batch : {{user.s_profile.batch}}<br />
+            <br />
+
+            Phone : {{user.s_profile.phone}}<br />
+          </div>
+        </div>
+      </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
