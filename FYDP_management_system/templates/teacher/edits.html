@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'css/t_home.css' %}" />
-    <title>Home</title>
+    <title>Edits</title>
   </head>
   <body>
     <section>
@@ -33,7 +34,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active ">
+            <li class="nav-item">
               <a class="nav-link" href="/teacher/t_home">Home </a>
             </li>
             <li class="nav-item">
@@ -42,22 +43,43 @@
             <li class="nav-item">
               <a class="nav-link" href="/teacher/work_area">Work Area </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item active">
               <a class="nav-link" href="/teacher/edits"> Edits </a>
             </li>
             <div class="prof_lgout">
-                <div><li class="nav-item ">
-                    <a class="nav-link" href="/teacher/t_profile">Profile </a>
-                  </li></div>
+              <div>
+                <li class="nav-item">
+                  <a class="nav-link" href="/teacher/t_profile">Profile </a>
+                </li>
+              </div>
 
-                  <div><a href="{% url 't_logout' %}" class="btn btn-secondary t_logout"> Logout</a></div>
+              <div>
+                <a
+                  href="{% url 't_logout' %}"
+                  class="btn btn-secondary t_logout"
+                >
+                  Logout</a
+                >
+              </div>
             </div>
           </ul>
         </div>
       </nav>
 
-      <h1>This is teacher home</h1>
-      <!------------------Navbar Start--------------------->
+      <!------------------Navbar end --------------------->
+      <div class="container">
+        <h1 >Edit your profile here</h1>
+        <div class="col-md-6 offset-md-3">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token%} {% for form in form %} {{ form.label_tag}} {{form}}
+            {{form.errors|striptags}}
+            <br />
+            <br />
+            {% endfor %}
+            <button type="submit">save profile</button>
+          </form>
+        </div>
+      </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
