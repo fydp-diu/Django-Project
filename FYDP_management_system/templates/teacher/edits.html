@@ -34,41 +34,34 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <a class="nav-link" href="/teacher/t_home">Home </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <a class="nav-link" href="/teacher/student_list">Student List </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <a class="nav-link" href="/teacher/work_area">Work Area </a>
             </li>
-            <li class="nav-item active">
+
+            <li class="nav-item active ml-3 mr-5">
               <a class="nav-link" href="/teacher/edits"> Edits </a>
             </li>
-            <div class="prof_lgout">
-              <div>
-                <li class="nav-item">
-                  <a class="nav-link" href="/teacher/t_profile">Profile </a>
-                </li>
-              </div>
 
-              <div>
-                <a
-                  href="{% url 't_logout' %}"
-                  class="btn btn-secondary t_logout"
-                >
-                  Logout</a
-                >
-              </div>
-            </div>
+            <li class="nav-item ml-5">
+              <a class="nav-link" href="/teacher/t_profile">Profile </a>
+            </li>
+
+            <a href="{% url 't_logout' %}" class="btn btn-secondary t_logout">
+              Logout</a
+            >
           </ul>
         </div>
       </nav>
 
       <!------------------Navbar end --------------------->
       <div class="container">
-        <h1 >Edit your profile here</h1>
+        <h1>Edit your profile here</h1>
         <div class="col-md-6 offset-md-3">
           <form method="POST" enctype="multipart/form-data">
             {% csrf_token%} {% for form in form %} {{ form.label_tag}} {{form}}
