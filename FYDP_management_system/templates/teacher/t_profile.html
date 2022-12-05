@@ -42,36 +42,28 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-3">
             <li class="nav-item">
               <a class="nav-link" href="/teacher/t_home">Home </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <a class="nav-link" href="/teacher/student_list">Student List </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <a class="nav-link" href="/teacher/work_area">Work Area </a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item ml-3 mr-5">
               <a class="nav-link" href="/teacher/edits"> Edits </a>
             </li>
 
-            <div class="prof_lgout">
-              <div>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/teacher/t_profile">Profile </a>
-                </li>
-              </div>
+            <li class="nav-item active ml-5">
+              <a class="nav-link" href="/teacher/t_profile">Profile </a>
+            </li>
 
-              <div>
-                <a
-                  href="{% url 't_logout' %}"
-                  class="btn btn-secondary t_logout"
-                >
-                  Logout</a
-                >
-              </div>
-            </div>
+            <a href="{% url 't_logout' %}" class="btn btn-secondary t_logout">
+              Logout</a
+            >
           </ul>
         </div>
       </nav>
