@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
     <title>Home</title>
     <link
       rel="stylesheet"
@@ -12,7 +14,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body id="bg" style="background-image: url('{% static 'img/13.jpg'%}');">
     <section>
       <!------------------Navbar Start--------------------->
       <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -99,7 +101,8 @@
         </div>
       </nav>
 
-      <h1>This is home</h1>
+      <h1 id="bgh1">DIU FINAL YEAR DESIGN Project Management System</h1>
+      <!---<img src="{% static 'img/d.jpg' %}" alt="django">
 
       <!------------------Navbar Start--------------------->
     </section>

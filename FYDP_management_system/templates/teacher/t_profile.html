@@ -11,13 +11,23 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/t_profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/t_profile.css'%}">
     <title>Teacher Profile</title>
+    <style>
+      .ttp{
+        background-color: rgb(197, 197, 234);
+        border: 2px solid rgb(18, 18, 27);
+        padding-bottom: 130px;
+        padding-left: 30px;
+    }
+    
+    </style>
   </head>
   <body>
     <section>
       <!------------------Navbar Start--------------------->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        
         <a class="navbar-brand" href="#">FYDP</a>
         <button
           class="navbar-toggler"
@@ -65,11 +75,11 @@
           </ul>
         </div>
       </nav>
-
+<div class="ttp">
       <h1>This is teacher profile</h1>
       <!------------------Navbar Start--------------------->
-      <div class="container">
-        <div class="row">
+      <div class="container" id="tp" >
+        <div class="row " id="">
           <div class="col">
             Name : {{user.username}}<br />
             <br />
@@ -86,6 +96,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
